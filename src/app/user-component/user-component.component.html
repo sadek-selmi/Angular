@@ -1,0 +1,13 @@
+
+<h1>{{name}}</h1>
+<h2>Adresse: {{address}}</h2>
+<p>Hobbies:</p>
+<button ion-button full round (click)="onButtonClick()" ion-button >{{text}}</button>
+
+<ul *ngIf="buttonClicked" >
+  <li  *ngFor="let value of hobbies; let myIndex=index;">
+    {{ value }} <button class="pull-right btn btn-sm btn-warning" (click)="removeItem(myIndex,value)">Delete</button>
+
+  </li>
+</ul>
+SS

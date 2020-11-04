@@ -1,0 +1,42 @@
+<div class="card m-3">
+  <h5 class="card-header">Seance 5</h5>
+  <div class="card-body">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="form-row">
+
+        <div class="form-group col-5">
+          <label>Name</label>
+          <input type="text" formControlName="Name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Name.errors }" />
+          <div *ngIf="submitted && f.Name.errors" class="invalid-feedback">
+            <div *ngIf="f.Name.errors.required">Name is required</div>
+            <div *ngIf="f.Name.errors.minlength">Name must be at least 3 characters</div>
+          </div>
+        </div>
+
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+          <div *ngIf="f.email.errors.required">Email is required</div>
+          <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col">
+          <label>Cin</label>
+          <input type="password" formControlName="Cin" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Cin.errors }" />
+          <div *ngIf="submitted && f.Cin.errors" class="invalid-feedback">
+            <div *ngIf="f.Cin.errors.required">Cin is required</div>
+            <div *ngIf="f.Cin.errors.minlength">Cin must be at least 8 characters</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center">
+        <button class="btn btn-primary mr-1"  >Ajouter</button>
+      </div>
+    </form>
+  </div>
+</div>

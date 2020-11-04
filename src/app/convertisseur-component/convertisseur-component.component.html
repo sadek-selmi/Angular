@@ -1,0 +1,16 @@
+<p>convertisseur-component works!</p>
+<input type="text" class="form-control" [(ngModel)] ="val">
+
+<br>
+
+<button (click) ="StockValues(val)">stocker </button>
+
+
+<table *ngFor ="let e of tab">
+  <tr *ngIf="e ">
+
+    <td>{{e}}</td>
+  </tr>
+</table>
+
+<app-to-euro-convert-component [valeur] ="val*3.2" ></app-to-euro-convert-component>

@@ -1,0 +1,6 @@
+<p>salles-list-component works!</p>
+<div *ngFor="let salle of liste">
+  <ul>
+    <li>{{salle.nom}} <a [routerLink]= "['/salle',salle.id]">Details</a></li>
+  </ul>
+</div>

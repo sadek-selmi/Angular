@@ -1,0 +1,45 @@
+
+<table mat-table *ngFor="let film of filmss" style="width:100% ;  ">
+  <td   *ngIf=" film.duree <= 5"  [ngStyle]="{'color':film.duree == 2 ? 'green' : 'red' } "
+         >
+    <h3>
+      Categorie {{film?.categorie}}</h3>
+    <tr >Duree :{{film?.duree}}</tr>
+    <tr > Nom : {{film?.nom}}</tr>
+
+  </td>
+</table>
+
+<table mat-table *ngFor="let film of filmss" style="width:100% ;  ">
+  <td   *ngIf=" film.duree <= 5" [ngStyle]="{'font-size' :film.duree == 2 ? '24px' : '30px' }"
+  >
+  <h3>
+    Categorie {{film?.categorie}}</h3>
+  <tr >Duree :{{film?.duree}}</tr>
+  <tr > Nom : {{film?.nom}}</tr>
+
+  </td>
+</table>
+public sommee(){
+  for (var i = 0; i < this.filmss.length; i++) {
+    if (this.filmss[i].categorie=='action')
+    {
+      this.somme++;
+this.long=this.filmss.length;
+    }
+  }}
+
+<form #formulaire="ngForm">
+
+  <label for="email"> email</label>
+  <input value="name" #email="ngModel " email required type="text"
+  [ngModel] name="email" id="email" class="form-control">
+  <div *ngIf="email.invalid && email.touched"
+  class="alert-danger"> verifier email</div
+  >
+  <input value="password">
+  <input type="submit">
+
+
+
+</form>

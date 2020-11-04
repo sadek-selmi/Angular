@@ -1,0 +1,14 @@
+<p>salle-component works!</p>
+<div>
+  <p>Salle Details</p><br>
+
+  <div *ngFor="let salle of me">
+    <div *ngIf="salle.id == idS">
+      <ul>
+        <li>{{salle.id}}</li>
+        <li>{{salle.nom}}</li>
+        <li>{{salle.capacite}}</li>
+      </ul>
+    </div>
+  </div>
+</div>

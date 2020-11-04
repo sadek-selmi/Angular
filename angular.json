@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Seance2"
+    }
+  },
+  "defaultProject": "Seance2",
+  "cli": {
+    "analytics": false
+  }
 }

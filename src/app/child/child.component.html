@@ -1,0 +1,14 @@
+<p>child works!</p>
+<div (click)="change()" [ngStyle] ="{color : color}">
+  je suis le composant fils
+</div>
+
+
+<button (click)="SendData()">envoyer</button>
+<input [(ngModel)]="name" #ctrl="ngModel" required>
+
+<p>Value: {{ name }}</p>
+<p>Valid: {{ ctrl.valid }}</p>
+
+<button style="background-color: {{name}}">Set value</button>
+<div  [ngClass]="{'alert alert-primary ' :step =='step1' }"  >sss</div>

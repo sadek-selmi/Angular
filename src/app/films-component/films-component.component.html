@@ -1,0 +1,56 @@
+
+
+<table mat-table *ngFor="let film of filmss" style="width:100% ;  ">
+
+  <td   *ngIf=" film.duree <= 5"  [style.color]="film.duree==2 ?color : 'red' "
+        [style.font-size.px]=" film.duree==2 ?'24': '30'">
+    <h3>
+             Categorie {{film?.categorie}}</h3>
+    <tr >Duree :{{film?.duree}}</tr>
+    <tr > Nom : {{film?.nom}}</tr>
+
+  </td>
+</table>
+<button  full round (click)="onButtonClick()">calcilll</button>
+<ul *ngIf="buttonClicked">
+<p>{{somme}}</p>
+<p>{{long}}</p>
+
+</ul>
+<input value="{{long}}" >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table mat-table *ngFor="let film of filmss" style="width:100% ;  ">
+  <td   *ngIf=" film.duree <= 5"  [ngStyle]="{'color':film.duree == 2 ? 'green' : 'red' } "
+         >
+    <h3>
+      Categorie {{film?.categorie}}</h3>
+    <tr >Duree :{{film?.duree}}</tr>
+    <tr > Nom : {{film?.nom}}</tr>
+
+  </td>
+</table>
+
+<table mat-table *ngFor="let film of filmss" style="width:100% ;  ">
+  <td   *ngIf=" film.duree <= 5" [ngStyle]="{'font-size' :film.duree == 2 ? '24px' : '30px' }"
+  >
+  <h3>
+    Categorie {{film?.categorie}}</h3>
+  <tr >Duree :{{film?.duree}}</tr>
+  <tr > Nom : {{film?.nom}}</tr>
+
+  </td>
+</table>

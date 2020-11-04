@@ -1,0 +1,13 @@
+<h2>{{Title}}</h2>
+
+
+
+<table mat-table *ngFor="let article of ListeArticles" style="width:100% ;  ">
+  <td style="border-style: inset"   *ngIf="article.Auteur!=='Ahmed Said'"><h3>
+  {{article?.Titre}}</h3>
+  <tr >Auteur :{{article?.Auteur}}</tr>
+  <tr >Date : {{article?.Date | date}}</tr>
+   <tr > Contenu : {{article?.Contenu}}</tr>
+
+  </td>
+</table>

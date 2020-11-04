@@ -1,0 +1,4 @@
+<p>parent works!</p>
+<input type="text" class="form-control"[(ngModel)] ="nom">
+
+<app-child [color] ="nom" (color1)="Change($event)"></app-child>
