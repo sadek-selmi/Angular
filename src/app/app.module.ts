@@ -17,6 +17,8 @@ import { SallesListComponentComponent } from './salles-list-component/salles-lis
 import {RouterModule} from '@angular/router';
 import { SalleComponentComponent } from './salle-component/salle-component.component';
 import { AppRoutingModule } from './app-routing.module';
+import { TodoListComponentComponent } from './todo-list-component/todo-list-component.component';
+import { UsersComponentComponent } from './users-component/users-component.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { AppRoutingModule } from './app-routing.module';
     TemplateDrivenFormComponentComponent,
     HomeComponentComponent,
     SallesListComponentComponent,
-    SalleComponentComponent
+    SalleComponentComponent,
+    TodoListComponentComponent,
+    UsersComponentComponent
   ],
     imports: [
         BrowserModule,

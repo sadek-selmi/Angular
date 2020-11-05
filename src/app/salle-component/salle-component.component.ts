@@ -18,11 +18,11 @@ export class SalleComponentComponent implements OnInit {
   ];
 
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private routes: ActivatedRoute) {
   }
 
   ngOnInit(): void {
 
-    this.idS = this.route.snapshot.params.id;
+    this.idS = this.routes.snapshot.params.id;
   }
 }

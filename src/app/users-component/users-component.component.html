@@ -1,0 +1,21 @@
+<p>users-component works!</p>
+
+<input type="text" value="saisir username" class="form-control" [(ngModel)] ="val">
+
+<br>
+
+<button (click) ="getNumberd(val)">CHerche </button>
+
+<p>{{NumBtodo}}</p>
+<table mat-table *ngFor="let to of listUsers" style="width:100% ;  ">
+
+<td   >
+  <h3>
+    id {{to?.id}}</h3>
+  <tr >name :{{to?.name}}</tr>
+  <tr >username :{{to?.username}}</tr>
+
+  <tr > email : {{to?.email}}</tr>
+
+</td>
+</table>

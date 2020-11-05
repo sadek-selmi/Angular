@@ -1,0 +1,15 @@
+<p>todo-list-component works!</p>
+<button (click)="getNumberd()">Bilan</button> <p>{{NumBtodo}}</p>
+
+<table mat-table *ngFor="let to of liste" style="width:100% ;  ">
+
+  <td   >
+    <h3>
+      userId {{to?.userId}}</h3>
+    <tr >id :{{to?.id}}</tr>
+    <tr >Title :{{to?.title}}</tr>
+
+    <tr > Completed : {{to?.completed}}</tr>
+
+  </td>
+</table>
